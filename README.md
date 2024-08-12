@@ -10,15 +10,7 @@ Welcome to the Rust Bootcamp! This comprehensive guide will take you from a begi
 ## Table of Contents
 
 1. [Getting Started](#getting-started)
-2. [Syntax and Data Types](#syntax-and-data-types)
-3. [Control Flow](#control-flow)
-4. [Functions](#functions)
-5. [Structs and Enums](#structs-and-enums)
-6. [Error Handling](#error-handling)
-7. [Modules and Packages](#modules-and-packages)
-8. [Generics](#generics)
-9. [Concurrency](#concurrency)
-10. [Testing](#testing)
+2. [Solana keypair](#solana-keypair)
 
 ## Getting Started
 
@@ -27,42 +19,23 @@ To begin your Rust journey, you'll need to install the Rust programming language
 Once Rust is installed, you can create a new Rust project using the `cargo` command-line tool:
 
 ```bash
-$ cargo new my_project
+$ cargo my_project
 $ cd my_project
 ```
 
-## Syntax and Data Types
+## Solana Keypair
+```bash
+solana-keygen new -o dev-sol-wallet/kp.json
+```
 
-In this section, you'll learn about the basic syntax of Rust and the different data types it supports. From variables and constants to primitive types and compound types, you'll gain a solid understanding of Rust's foundational concepts.
+NOTE! This BIP39 passphrase improves security of the recovery seed phrase NOT the
+keypair file itself, which is stored as insecure plain text.
 
-## Control Flow
+Wrote new keypair to `dev-sol-wallet/kp.json`
 
-Control flow is an essential aspect of any programming language. In this section, you'll explore how to make decisions using conditional statements, loop over collections, and handle errors using `match` expressions.
+```
+pubkey: 2EVTK5WauqhPN2iRq9ygWtHTSPvvHX6iJCY8fHTq8Mow
+```
 
-## Functions
-
-Functions are the building blocks of any Rust program. In this section, you'll learn how to define and call functions, pass arguments, and return values. You'll also discover the power of closures and how they can be used to create flexible and reusable code.
-
-## Structs and Enums
-
-Rust provides powerful abstractions for defining custom data types. In this section, you'll dive into structs and enums, which allow you to create complex data structures and define behavior associated with them.
-
-## Error Handling
-
-Error handling is a critical aspect of writing robust and reliable code. Rust's approach to error handling is unique and powerful. In this section, you'll learn about the `Result` type, `panic!` macro, and how to handle errors using `match` expressions and the `?` operator.
-
-## Modules and Packages
-
-Rust's module system allows you to organize your code into logical units. In this section, you'll explore how to create modules, define visibility rules, and import code from other modules. You'll also learn how to create reusable libraries using packages and publish them to the [crates.io](https://crates.io) community repository.
-
-## Generics
-
-Generics enable you to write code that can work with multiple types. In this section, you'll learn how to define generic functions, structs, and enums. You'll also discover how to use trait bounds to specify behavior for generic types.
-
-## Concurrency
-
-Rust's ownership and borrowing system makes it easy to write concurrent code without the fear of data races. In this section, you'll explore Rust's concurrency primitives, such as threads, channels, and locks. You'll also learn about async/await syntax and how to write asynchronous code using the `tokio` runtime.
-
-## Testing
-
-Writing tests is an essential part of software development. In this section, you'll learn how to write unit tests and integration tests for your Rust code. You'll also discover how to use the `assert!` macro and test-driven development (TDD) principles to ensure the correctness of your code.
+Save this seed phrase and your BIP39 passphrase to recover your new keypair:
+`worry sock sorry illegal brother eyebrow boss symbol hidden quick cousin script`
